@@ -3,16 +3,14 @@
     "alias": "redirect",
     "description": "",
     "keywords": [],
-    "active": 1,
+    "active": 0,
     "order": 80,
     "providers": [
         "Modules\\Redirect\\Providers\\RedirectServiceProvider",
         "Modules\\Redirect\\Providers\\RouteServiceProvider",
         "Modules\\Redirect\\Providers\\EventServiceProvider"
     ],
-    "aliases": {},
-    "files": [
-        
-    ],
+    "aliases": [],
+    "files": [],
     "requires": []
 }
