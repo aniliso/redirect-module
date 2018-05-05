@@ -36,7 +36,7 @@ class RedirectModuleMiddleware
             if($response->exception) {
                 $className = new \ReflectionClass(get_class($response->exception));
                 if($className->getShortName() == "NotFoundHttpException") {
-                    event(new NotFoundHttpEventHandler($request->fullUrl(), $request->getClientIp(), $response->getStatusCode()));
+                    event(new NotFoundHttpEventHandler($request->url(), $request->getClientIp(), $response->getStatusCode()));
                 }
             }
             if($redirect = $this->redirect->findByAttributes(['from' => $request->getRequestUri()])) {

@@ -3,7 +3,7 @@
     "alias": "redirect",
     "description": "",
     "keywords": [],
-    "active": 0,
+    "active": 1,
     "order": 80,
     "providers": [
         "Modules\\Redirect\\Providers\\RedirectServiceProvider",
