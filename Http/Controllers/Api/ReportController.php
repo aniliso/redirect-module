@@ -61,7 +61,7 @@ class ReportController extends AdminBaseController
                         $newRedirect = new Redirect([
                             'from'   => $url['path'],
                             'to'     => $inputData['value'],
-                            'status' => 302
+                            'status' => 301
                         ]);
                         $newRedirect->save();
                         $report->redirect()->associate($newRedirect);

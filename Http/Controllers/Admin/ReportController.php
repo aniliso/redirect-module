@@ -42,6 +42,9 @@ class ReportController extends AdminBaseController
                 ->addColumn('to', function ($report){
                     return '<a href="#" id="to" class="editable" data-type="text" data-pk="' . $report->id . '" data-url="'.route('api.redirect.reports.update').'" data-title="">' . @$report->redirect->to. '</a>';
                 })
+                ->addColumn('status', function($report){
+                    return isset($report->redirect->status) ? $report->redirect->status : '';
+                })
                 ->addColumn('action', function($report){
                     $action_buttons =  \Html::decode(\Form::button(
                         '<i class="fa fa-trash"></i>',

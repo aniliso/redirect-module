@@ -31,6 +31,7 @@
                         <tr><th>{{ trans('redirect::reports.form.ip') }}</th>
                             <th>{{ trans('redirect::reports.form.url') }}</th>
                             <th>{{ trans('redirect::redirects.form.to') }}</th>
+                            <th>{{ trans('redirect::redirects.form.status') }}</th>
                             <th>{{ trans('core::core.table.created at') }}</th>
                             <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                         </tr>
@@ -91,6 +92,7 @@
                     {data: 'ip', name: 'ip'},
                     {data: 'url', name: 'url'},
                     {data: 'to', name:'to'},
+                    {data: 'status', name:'status'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'action', name: 'action', orderable: false, searchable: true}
                 ],

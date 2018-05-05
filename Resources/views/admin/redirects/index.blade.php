@@ -41,13 +41,13 @@
                         <?php foreach ($redirects as $redirect): ?>
                         <tr>
                             <td>
-                                <a href="{{ route('admin.redirect.redirect.edit', [$redirect->id]) }}">
-                                    {{ url($redirect->from) }}
+                                <a target="_blank" href="{{ url($redirect->from) }}">
+                                    {{ $redirect->from }}
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ route('admin.redirect.redirect.edit', [$redirect->id]) }}">
-                                    {{ url($redirect->to) }}
+                                <a target="_blank" href="{{ url($redirect->to) }}">
+                                    {{ $redirect->to }}
                                 </a>
                             </td>
                             <td>
