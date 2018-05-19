@@ -39,6 +39,7 @@ class RedirectModuleMiddleware
                     event(new NotFoundHttpEventHandler($request->fullUrl(), $request->getClientIp(), $response->getStatusCode()));
                 }
             }
+            //if not found url, redirect new url
             if($redirect = $this->redirect->findByAttributes(['from' => $request->getRequestUri()])) {
                 return redirect($redirect->to, $redirect->status);
             }
