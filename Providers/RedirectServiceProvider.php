@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Core\Events\BuildingSidebar;
 use Modules\Core\Traits\CanGetSidebarClassForModule;
+use Modules\Redirect\Composers\RedirectStatusComposer;
 use Modules\Redirect\Events\Handlers\RegisterRedirectSidebar;
 use Modules\Redirect\Http\Middleware\RedirectModuleMiddleware;
 
@@ -47,6 +48,8 @@ class RedirectServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
 
         $this->app->make('Illuminate\Contracts\Http\Kernel')->pushMiddleware(RedirectModuleMiddleware::class);
+
+        view()->composer('redirect::admin.*', RedirectStatusComposer::class);
     }
 
     /**

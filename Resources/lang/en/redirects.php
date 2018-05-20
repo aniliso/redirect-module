@@ -21,4 +21,10 @@ return [
     ],
     'validation' => [
     ],
+    'status'           => [
+        'Found'              => 'Found',
+        'Moved Permanently'  => 'Moved Permanently',
+        'Temporary Redirect' => 'Temporary Redirect',
+        'Permanent Redirect' => 'Permanent Redirect',
+    ]
 ];

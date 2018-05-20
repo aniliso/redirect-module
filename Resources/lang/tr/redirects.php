@@ -26,5 +26,11 @@ return [
     ],
     'api'              => [
         'update resource' => 'Yönlendirme Güncelle'
+    ],
+    'status'           => [
+        'Found'              => 'Geçici olarak taşındı',
+        'Moved Permanently'  => 'Kalıcı olarak taşındı',
+        'Temporary Redirect' => 'Geçici Yönlendirme',
+        'Permanent Redirect' => 'Kalıcı Yönlendirme',
     ]
 ];

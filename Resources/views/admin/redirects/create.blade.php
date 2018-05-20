@@ -31,7 +31,7 @@
         <div class="col-md-2">
             <div class="box">
                 <div class="box-body">
-                    {!! Form::normalInput('status', trans('redirect::redirects.form.status'), $errors) !!}
+                    {!! Form::normalSelect('status', trans('redirect::redirects.form.status'), $errors, $redirectStatuses, 301) !!}
                 </div>
             </div>
         </div>
