@@ -30,7 +30,7 @@ class RedirectServiceProvider extends ServiceProvider
         $this->registerBindings();
 
         $this->app->extend('asgard.ModulesList', function($app) {
-            array_push($app, 'portfolio');
+            array_push($app, 'redirect');
             return $app;
         });
 
