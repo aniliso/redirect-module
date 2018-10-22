@@ -16,6 +16,7 @@ class CacheReportDecorator extends BaseCacheDecorator implements ReportRepositor
 
     public function clearReports()
     {
-        return $this->cache->tags($this->entityName)->flush();
+        $this->cache->tags($this->entityName)->flush();
+        return $this->repository->clearReports();
     }
 }

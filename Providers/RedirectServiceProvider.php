@@ -69,7 +69,7 @@ class RedirectServiceProvider extends ServiceProvider
             function () {
                 $repository = new \Modules\Redirect\Repositories\Eloquent\EloquentReportRepository(new \Modules\Redirect\Entities\Report());
 
-                if (! config('app.cache')) {
+                if (config('app.cache') === false) {
                     return $repository;
                 }
 
@@ -81,7 +81,7 @@ class RedirectServiceProvider extends ServiceProvider
             function () {
                 $repository = new \Modules\Redirect\Repositories\Eloquent\EloquentRedirectRepository(new \Modules\Redirect\Entities\Redirect());
 
-                if (! config('app.cache')) {
+                if (config('app.cache') === false) {
                     return $repository;
                 }
 
